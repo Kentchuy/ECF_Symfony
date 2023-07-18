@@ -2,6 +2,7 @@
 body{
     margin: 0;
 }
+
 /* Nav */
 .wrapperNav ul{
     padding: 0;
@@ -23,9 +24,64 @@ ul li{
     text-align: center;
     align-items: center;
 }
-section{
+.wrapperFooter section{
     display: flex;
     flex-direction: column;
     flex: 1;
     background-color: lightgray;
+}
+/* Page connexion */
+.login .row{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.login .col{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 2rem;
+}
+.login button{
+    margin: 1rem;
+}
+
+/* Page Inscription */
+.register fieldset{
+    border: none;
+}
+.register legend{
+    font-size: 1.5rem;
+}
+.register .row{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.register .col{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.register form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 2rem;
+}
+.register button{
+    margin: 1rem;
 }
