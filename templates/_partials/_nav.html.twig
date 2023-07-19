@@ -1,19 +1,25 @@
 <nav>
     <div class="wrapperNav">
         <ul>
-            <li>
-                <a href="#">Nav1</a>
-            </li>
+            {% if app.user%}
+            {# Si connecté #}
+                <li>
+                    <a href="#">Mon compte</a>
+                </li>
 
+                <li>
+                    <a href="{{ path('app_logout') }}">Me déconnecter</a>
+                </li>
+            {% else %}
+            {# Si non connecté #}
+                <li>
+                    <a href="{{ path('app_register') }}">M'inscrire</a>
+                </li>
 
-            <li>
-                <a href="#">Nav2</a>
-            </li>
-        
-
-            <li>
-                <a href="#">Nav3</a>
-            </li>
+                <li>
+                    <a href="{{ path('app_login') }}">Me connecter</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </nav>
