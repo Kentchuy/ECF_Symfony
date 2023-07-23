@@ -7,7 +7,7 @@ use App\Entity\Image;
 use Doctrine\Persistence\ObjectManager;
 use Faker;
 
-class Imagefixtures extends Fixture implements DependentFixtureInterface
+class ImageFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {

@@ -8,7 +8,7 @@ use App\Entity\Product;
 use Faker;
 use Monolog\DateTimeImmutable;
 
-class Productfixtures extends Fixture
+class ProductFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
@@ -27,7 +27,7 @@ class Productfixtures extends Fixture
             $category = $this->getReference('cat-'.rand(1, 1));
             $product->setCategories($category);
 
-            // Créer un référence prod pour les images
+            // Créer une référence produit pour les images
             $this->setReference('prod-'.$prod, $product);
             $manager->persist($product);
         }

@@ -7,7 +7,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
 
-class Categoriefixtures extends Fixture
+class CategorieFixtures extends Fixture
 {
     private $counter = 1;
 

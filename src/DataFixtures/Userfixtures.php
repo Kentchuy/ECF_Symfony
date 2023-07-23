@@ -9,7 +9,7 @@ use App\Entity\User;
 use Faker;
 
 
-class Userfixtures extends Fixture
+class UserFixtures extends Fixture
 {
     public function __construct(private UserPasswordHasherInterface $passwordEncoder)
     {}
