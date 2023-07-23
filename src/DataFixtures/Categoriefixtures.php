@@ -9,21 +9,34 @@ use Doctrine\Persistence\ObjectManager;
 
 class Categoriefixtures extends Fixture
 {
+    private $counter = 1;
+
     public function load(ObjectManager $manager): void
     {
-        $parent = new Categorie ;
+        $parent = new Categorie() ;
         $parent->setName('Informatique');
-
+        
         $manager->persist($parent);
-        $manager->flush();
-
 
         $category = new Categorie();
         $category->setName('Ordinateur');
-
         $category->setParent($parent);
 
         $manager->persist($category);
+
+        $this->addReference('cat-'.$this->counter, $category);
+        $this->counter++;
+        
         $manager->flush();
     }
+
+    // public function createCategory(string $name, Categorie $parent = null, ObjectManager $manager){
+    //     $category = new Categorie();
+    //     $category->setName($name);
+    //     $category->setParent($parent);
+    //     $manager->persist($category);
+
+    //     $this->addReference('cat-'.$this->counter, $category);
+    //     $this->counter++;
+    // }
 }
