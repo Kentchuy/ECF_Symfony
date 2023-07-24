@@ -13,30 +13,47 @@ class CategorieFixtures extends Fixture
 
     public function load(ObjectManager $manager): void
     {
-        $parent = new Categorie() ;
-        $parent->setName('Informatique');
+        $parent = $this->createCategory('Informatique', null, $manager);
         
-        $manager->persist($parent);
+        $this->createCategory('Ordinateurs portables', $parent, $manager);
+        $this->createCategory('Ecrans', $parent, $manager);
+        $this->createCategory('Souris', $parent, $manager);
 
+        $parent = $this->createCategory('Mode', null, $manager);
+
+        $this->createCategory('Homme', $parent, $manager);
+        $this->createCategory('Femme', $parent, $manager);
+        $this->createCategory('Enfant', $parent, $manager);
+                
+        $manager->flush();
+    }
+
+    public function createCategory(string $name, Categorie $parent = null, ObjectManager $manager){
         $category = new Categorie();
-        $category->setName('Ordinateur');
+        $category->setName($name);
         $category->setParent($parent);
-
         $manager->persist($category);
 
         $this->addReference('cat-'.$this->counter, $category);
         $this->counter++;
-        
-        $manager->flush();
+
+        return $category;
     }
-
-    // public function createCategory(string $name, Categorie $parent = null, ObjectManager $manager){
-    //     $category = new Categorie();
-    //     $category->setName($name);
-    //     $category->setParent($parent);
-    //     $manager->persist($category);
-
-    //     $this->addReference('cat-'.$this->counter, $category);
-    //     $this->counter++;
-    // }
 }
+
+
+    // public function load(ObjectManager $manager): void
+    // {
+    //     $parent = new Categorie() ;
+    //     $parent->setName('Informatique');
+        
+    //     $manager->persist($parent);
+
+    //     $category = new Categorie();
+    //     $category->setName('Ordinateur');
+    //     $category->setParent($parent);
+
+    //     $manager->persist($category);
+        
+    //     $manager->flush();
+    // }

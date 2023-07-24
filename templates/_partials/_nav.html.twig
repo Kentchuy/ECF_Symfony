@@ -1,6 +1,13 @@
 <nav>
     <div class="wrapperNav">
         <ul>
+                <li>
+                    <a href="{{ path('main') }}">E-commerce</a>
+                </li>
+
+                <li>
+                    <a href="{{ path('main') }}">Accueil</a>
+                </li>
             {% if app.user%}
             {# Si connecté #}
                 <li>

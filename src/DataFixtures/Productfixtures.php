@@ -24,7 +24,7 @@ class ProductFixtures extends Fixture
             $product->setCreatedAt(new DateTimeImmutable('Y-m-d H:i:s'));
 
             // Pour chercher une référence de catégorie
-            $category = $this->getReference('cat-'.rand(1, 1));
+            $category = $this->getReference('cat-'.rand(1, 8));
             $product->setCategories($category);
 
             // Créer une référence produit pour les images

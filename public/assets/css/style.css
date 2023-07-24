@@ -93,3 +93,16 @@ ul li{
 .register button{
     margin: 1rem;
 }
+/* Page Main */
+.main .presentation:first-of-type{
+    margin-bottom: 2vh;
+}
+.main .col{
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem 0 2rem;
+}
+.main .cat{
+    margin-bottom: 1vh;
+    margin: 0 0 0 4rem;
+}

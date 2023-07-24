@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des produits de la catégorie {{ category.name }}{% endblock %}
+
+{% block body %}
+    <main class="main">
+        <section class="col">
+            <div class="col">
+                <h1>Liste des produits de la catégorie {{ category.name }}</h1>
+            </div>
+            {% for product in products %}
+                <article>
+                    <div>
+                        <h2>{{ product.name }}</h2>
+                        <p>{{ product.description }}</p>
+                        <a href="{{ path('product_detail',{"id":product.id}) }}">Voir les détails</a>
+                    </div>
+                </article>
+            {% endfor %}
+        </section>
+    </main>
+{% endblock %}
