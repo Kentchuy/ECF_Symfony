@@ -11,6 +11,9 @@ a.bouton{
     padding: 2px 6px;
     text-decoration-line: none;
 }
+.red{
+    color: red;
+}
 /* Nav */
 .wrapperNav ul{
     padding: 0;
