@@ -109,3 +109,21 @@ ul li{
     margin-bottom: 1vh;
     margin: 0 0 0 4rem;
 }
+/* Page detail */
+.detail .row{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.detail .col{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 0 4rem 0 4rem;
+}
+.desc{
+    max-width: 30vw;
+}
