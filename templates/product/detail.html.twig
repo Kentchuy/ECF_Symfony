@@ -14,7 +14,7 @@
             <div class="col">
                 <p>Images</p>
                 {% for image in product.images %}
-                    <pre> {{ dump(image) }} </pre>
+                    {# <pre> {{ dump(image) }} </pre> #}
                     <img src="{{ asset('assets/uploads/') ~ image.name }}">
                 {% endfor %}
             </div>
