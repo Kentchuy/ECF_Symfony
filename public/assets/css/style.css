@@ -14,6 +14,12 @@ a.bouton{
 .red{
     color: red;
 }
+.formchild > div{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
 /* Nav */
 .wrapperNav ul{
     padding: 0;
